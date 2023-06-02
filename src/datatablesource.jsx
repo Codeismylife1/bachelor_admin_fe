@@ -70,7 +70,7 @@ export const userColumns = [
    
     {
       id: 2,
-      username: "Snow",
+      username: "Ганаа",
       img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       email: "1snow@gmail.com",
       aimag: 'baynhongor',
@@ -82,7 +82,7 @@ export const userColumns = [
    
     {
       id: 3,
-      username: "Snow",
+      username: "Анхаа",
       img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       email: "1snow@gmail.com",
       aimag: 'baynhongor',
@@ -94,7 +94,7 @@ export const userColumns = [
    
     {
       id: 4,
-      username: "Snow",
+      username: "Цэцгээ",
       img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       email: "1snow@gmail.com",
       aimag: 'baynhongor',
@@ -106,7 +106,7 @@ export const userColumns = [
    
     {
       id: 5,
-      username: "Snow",
+      username: "Jorj",
       img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
       email: "1snow@gmail.com",
       aimag: 'baynhongor',
