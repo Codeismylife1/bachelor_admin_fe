@@ -5,6 +5,10 @@ import MyContainer from "../../components/MyContainer";
 import Header from "../../components/Header";
 import MyCard from "../../components/MyCard";
 import Widget from "../../components/Widget";
+import Chart from "../../components/Chart";
+import Graphic from "../../components/Graphic";
+import PieChart from "../../components/PieChart";
+import Dugui from "../../components/PieChart";
 const Home = () => {
   const data = [
     {
@@ -30,8 +34,13 @@ const Home = () => {
                 <MyCard title={e.title} subtitle={e.subtitle} total={e.total} />
               );
             })} */}
-          <Widget type="user"/>
-          <Widget type="order"/>
+          <Widget type="user" amount={100} title={"Нийт мэргэжил"}/>
+          <Widget type="order"  amount={100} title={"Нийт элсэгч"}/>
+          </div>
+          <div className="charts" >
+            <Chart />
+            {/* <Dugui /> */}
+            <Graphic aspect={4/3} />
           </div>
         </MyContainer>
       </div>

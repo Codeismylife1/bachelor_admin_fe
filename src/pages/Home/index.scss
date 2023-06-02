@@ -4,12 +4,28 @@
     
     .homeContainer {
         flex: 6;
+        
+        .row , .charts{
+            margin-top: 10px;
+            display: flex;
+            gap: 10px;
+            width: 50%;
+        }
+        .charts {
+            padding: 5px 0px;
+            width: auto;
+        }
+        .listContainer {
+            -webkit-box-shadow: 2px 4px 10px 1px rgba(0, 0, 0, 0.47);
+            box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+            padding: 20px;
+            margin: 20px;
+      
+            .listTitle {
+              font-weight: 500;
+              color: gray;
+              margin-bottom: 15px;
+            }
+          }
     }
-}
-
-.row {
-    margin-top: 10px;
-    display: flex;
-    gap: 10px;
-    width: 50%;
 }
