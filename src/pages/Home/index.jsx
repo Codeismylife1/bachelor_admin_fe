@@ -3,12 +3,10 @@ import "./index.scss";
 import Sidebar from "../../components/Sidebar";
 import MyContainer from "../../components/MyContainer";
 import Header from "../../components/Header";
-import MyCard from "../../components/MyCard";
 import Widget from "../../components/Widget";
 import Chart from "../../components/Chart";
 import Graphic from "../../components/Graphic";
-import PieChart from "../../components/PieChart";
-import Dugui from "../../components/PieChart";
+import Datatable from "../../components/DataTable";
 const Home = () => {
   const data = [
     {
@@ -42,6 +40,10 @@ const Home = () => {
             {/* <Dugui /> */}
             <Graphic aspect={4/3} />
           </div>
+
+          {/* magadgui hezee ch ashiglagdahgui baij magad etseg tenger nomch ah haraad shiideh bui za  */}
+          {/* <MyTable /> */}
+          < Datatable />
         </MyContainer>
       </div>
     </div>
