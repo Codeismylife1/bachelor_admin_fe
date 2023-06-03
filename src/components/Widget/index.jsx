@@ -1,9 +1,11 @@
 import "./index.scss";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
+import W from "@mui/icons-material/PersonOutlined";
 import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
+import WorkOutline  from "@mui/icons-material/WorkOutline";
+import PersonOutline  from "@mui/icons-material/PersonOutline";
 
 const Widget = ({ type,amount, diff,  title, subtitle  }) => {
   let data;
@@ -19,7 +21,7 @@ const Widget = ({ type,amount, diff,  title, subtitle  }) => {
         isMoney: false,
         link: "Бүх сургуульд",
         icon: (
-          <PersonOutlinedIcon
+          <WorkOutline
             className="icon"
             style={{
               color: "crimson",
@@ -35,40 +37,11 @@ const Widget = ({ type,amount, diff,  title, subtitle  }) => {
         isMoney: false,
         link: "Мэргэжил сонгосон",
         icon: (
-          <ShoppingCartOutlinedIcon
+          <PersonOutline
             className="icon"
             style={{
               backgroundColor: "rgba(218, 165, 32, 0.2)",
               color: "goldenrod",
-            }}
-          />
-        ),
-      };
-      break;
-    case "earning":
-      data = {
-        title: "EARNINGS",
-        isMoney: true,
-        link: "View net earnings",
-        icon: (
-          <MonetizationOnOutlinedIcon
-            className="icon"
-            style={{ backgroundColor: "rgba(0, 128, 0, 0.2)", color: "green" }}
-          />
-        ),
-      };
-      break;
-    case "balance":
-      data = {
-        title: "BALANCE",
-        isMoney: true,
-        link: "See details",
-        icon: (
-          <AccountBalanceWalletOutlinedIcon
-            className="icon"
-            style={{
-              backgroundColor: "rgba(128, 0, 128, 0.2)",
-              color: "purple",
             }}
           />
         ),

@@ -7,6 +7,9 @@ import Widget from "../../components/Widget";
 import Chart from "../../components/Chart";
 import Graphic from "../../components/Graphic";
 import Datatable from "../../components/DataTable";
+
+import {  userColumns, userRows } from "../../datatablesource";
+
 const Home = () => {
   const data = [
     {
@@ -43,7 +46,7 @@ const Home = () => {
 
           {/* magadgui hezee ch ashiglagdahgui baij magad etseg tenger nomch ah haraad shiideh bui za  */}
           {/* <MyTable /> */}
-          < Datatable />
+          < Datatable rows = {userRows} columns ={ userColumns}  title="Нийт бүртгүүлсэн элсэгчид" search/>
         </MyContainer>
       </div>
     </div>

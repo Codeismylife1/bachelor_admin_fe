@@ -201,3 +201,42 @@ export const userColumns = [
     },
    
   ];
+
+
+  export const schoolColumns = [
+    { field: "id", headerName: "ID", width: "200" },
+  {
+      field: "schoolName",
+      headerName: "Сургуулийн нэр",
+      width: 200,
+    },
+    {
+      field: "address",
+      headerName: "Хаяг",
+      width: 230,
+    },
+    {
+      field: "description",
+      headerName: "Тайлбар",
+      width: 150,
+    },
+   
+  ];
+  
+  export const schoolRows = [
+    {
+      id: 1,
+      schoolName: "Snow",
+      address: "1snow@gmail.com",
+      description: 'baynhongor',
+    },
+   
+    {
+      id: 2,
+      schoolName: "Ганаа",
+      address: "1snow@gmail.com",
+      description: 'baynhongor',
+    },
+  
+   
+  ];
