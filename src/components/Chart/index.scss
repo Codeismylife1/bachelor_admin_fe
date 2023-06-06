@@ -22,12 +22,10 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      gap: 15px;
+      gap: 10px;
   
       .chartChart {
-        width: auto;
-        height: auto;
-        margin: -150px;
+        display: flex;
       }
   
       .title {

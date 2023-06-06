@@ -1,12 +1,8 @@
 import "./index.scss";
-import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import W from "@mui/icons-material/PersonOutlined";
-import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
-import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
-import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
-import WorkOutline  from "@mui/icons-material/WorkOutline";
-import PersonOutline  from "@mui/icons-material/PersonOutline";
+import WorkOutline from "@mui/icons-material/WorkOutline";
+import PersonOutline from "@mui/icons-material/PersonOutline";
 
+import { Link } from "react-router-dom";
 const Widget = ({ type,amount, diff,  title, subtitle  }) => {
   let data;
 
@@ -19,6 +15,7 @@ const Widget = ({ type,amount, diff,  title, subtitle  }) => {
       data = {
         title: "Нийт мэргэжил",
         isMoney: false,
+        route: "major",
         link: "Бүх сургуульд",
         icon: (
           <WorkOutline
@@ -35,6 +32,7 @@ const Widget = ({ type,amount, diff,  title, subtitle  }) => {
       data = {
         title: "Нийт элсэгч",
         isMoney: false,
+        route: "students",
         link: "Мэргэжил сонгосон",
         icon: (
           <PersonOutline
@@ -58,7 +56,9 @@ const Widget = ({ type,amount, diff,  title, subtitle  }) => {
         <span className="counter">
           {data.isMoney && "$"} {amount}
         </span>
-        <span className="link">{data.link}</span>
+        <Link to={`${data.route}`} style={{ textDecoration: "none" }}>
+     <span className="link">{data.link}</span>
+     </Link>
       </div>
       <div className="right">
         <div className="percentage positive">

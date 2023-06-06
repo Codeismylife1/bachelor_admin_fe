@@ -1,5 +1,5 @@
 import React from "react";
-import "./index.scss";
+import css from "./index.module.scss";
 import Sidebar from "../../components/Sidebar";
 import MyContainer from "../../components/MyContainer";
 import Header from "../../components/Header";
@@ -24,12 +24,12 @@ const Home = () => {
     },
   ];
   return (
-    <div className="home">
+    <div className={css.home}>
       <Sidebar />
-      <div className="homeContainer">
+      <div className={css.homeContainer}>
         <MyContainer>
           <Header name="ХЯНАХ САМБАР"></Header>
-          <div className="row">
+          <div className={css.row}>
             {/* {data.map((e) => {
               return (
                 <MyCard title={e.title} subtitle={e.subtitle} total={e.total} />
@@ -38,8 +38,9 @@ const Home = () => {
           <Widget type="user" amount={100} title={"Нийт мэргэжил"}/>
           <Widget type="order"  amount={100} title={"Нийт элсэгч"}/>
           </div>
-          <div className="charts" >
+          <div className={css.charts} >
             <Chart />
+            {/* maybe later we will seee */}
             {/* <Dugui /> */}
             <Graphic aspect={4/3} />
           </div>
