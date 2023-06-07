@@ -11,12 +11,12 @@ export default () => {
     axios.get(`/school`)
       .then(result => {
         console.log(result)
-        let dta = result.data.data.map(el =>{
-          let tmp =  el["Id"];
-          delete el["Id"]
-          return { ...el, id: tmp };
-        })
-        setSchools(dta);
+        // let dta = result.data.data.map(el =>{
+        //   let tmp =  el["Id"];
+        //   delete el["Id"]
+        //   return { ...el, id: tmp };
+        // })
+        setSchools(result.data.data);
         setError(null);
         setLoading(false);
       })
