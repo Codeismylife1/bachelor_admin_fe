@@ -7,16 +7,21 @@ import DataTable from "../../components/DataTable";
 import { schoolColumns, schoolRows } from "../../datatablesource";
 import TransitionAlerts from "../../components/Alert";
 import MySnackBar from "../../components/SnackBar";
-
+import useSchools from "../../Hooks/useSchools";
+import Loader from './../../components/Loader';
 const Schools = () => {
+  const [schools, loading, error] = useSchools();
   return <div className="home">
   <Sidebar />
+ 
+  {error && <p>{error}</p>}
   <div className="homeContainer">
     <MyContainer>
+    {loading && <Loader />}
       <Header name="СУРГУУЛИУД"></Header>
     
       <div className="row">
-        <DataTable columns={schoolColumns } rows={schoolRows} title="Салбар сургуулиуд" type="schools"/>
+        <DataTable columns={schoolColumns } rows={schools} title="Салбар сургуулиуд" type="schools"/>
        </div>
     </MyContainer>
   </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import { PieChart, Pie, Cell, Tooltip } from "recharts";
+import ExportToExcelButton from "../ExportButton";
 
 const data = [
   { name: "Group A", value: 400 },
@@ -39,6 +40,7 @@ const renderCustomizedLabel = ({
 };
 const Dugui = () => {
   return (
+    <>
     <PieChart width={200} height={200}>
 
       <Pie
@@ -58,6 +60,8 @@ const Dugui = () => {
         ))}
       </Pie>
     </PieChart>
+    </>
+
   );
 }
 

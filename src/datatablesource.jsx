@@ -212,24 +212,26 @@ export const userRows = [
 ];
 
 export const schoolColumns = [
-  { field: "id", headerName: "id", width: "10" },
+  { field: "Id", headerName: "id", width: "10" },
   {
-    field: "schoolName",
+    field: "name",
     headerName: "Сургуулийн нэр",
-    width: 200,
-  },
-  {
-    field: "address",
-    headerName: "Хаяг",
     width: 230,
   },
   {
-    field: "description",
-    headerName: "Тайлбар",
-    width: 150,
+    field: "slug",
+    headerName: "Товч нэр",
+    width: 100,
   },
+  {
+    field: "link",
+    headerName: "Website",
+    width: 230,
+  },
+ 
 ];
 
+// data
 export const schoolRows = [
   {
     id: 1,

@@ -56,7 +56,7 @@ const DataTable = (props) => {
             size="small"
             onChange={(newValue) => setTFValue(newValue.target.value)}
             id="outlined-basic"
-            label="Овог нэрээр хайна уу"
+            label={`${props.searchTitle}`}
             variant="outlined"
           />
         ) : null}

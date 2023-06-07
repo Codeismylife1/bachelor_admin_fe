@@ -6,7 +6,9 @@ import KeyboardArrowUpOutlinedIcon from "@mui/icons-material/KeyboardArrowUpOutl
 import './index.scss'
 import Dugui from '../PieChart';
 import BasicPopover from '../PopOver';
-const Chart = () => {
+import ChartComponent from '../ChartComp';
+import DuguiChart from '../DuguiChart';
+const Chart = (props) => {
     return (
         <div className="chart">
           <div className="top">
@@ -16,7 +18,12 @@ const Chart = () => {
           </div>
           <div className="bottom">
             <div className="chartChart">
+              {
+                props.type ==='dugui'  ?
               <Dugui />
+              // <DuguiChart />
+              :<ChartComponent data={props.data} />
+              }
             </div>
           
             <p className="amount">420</p>

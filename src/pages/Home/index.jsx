@@ -11,18 +11,6 @@ import Datatable from "../../components/DataTable";
 import {  userColumns, userRows } from "../../datatablesource";
 
 const Home = () => {
-  const data = [
-    {
-      title: "Нийт мэргэжил бүртгэл",
-      subtitle: "Бүх сургуульд",
-      total: 0,
-    },
-    {
-      title: "Мэргэжил сонгосон",
-      subtitle: "нийт элсэгч",
-      total: 1,
-    },
-  ];
   return (
     <div className={css.home}>
       <Sidebar />
@@ -47,7 +35,7 @@ const Home = () => {
 
           {/* magadgui hezee ch ashiglagdahgui baij magad etseg tenger nomch ah haraad shiideh bui za  */}
           {/* <MyTable /> */}
-          < Datatable rows = {userRows} columns ={ userColumns}  title="Нийт бүртгүүлсэн элсэгчид" search/>
+          < Datatable searchTitle="Овог нэрээр хайна уу" rows = {userRows} columns ={ userColumns}  title="Нийт бүртгүүлсэн элсэгчид" search/>
         </MyContainer>
       </div>
     </div>
