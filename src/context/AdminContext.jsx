@@ -16,47 +16,17 @@ const initialState = {
 export const AdminStore = (props) => {
   const [state, setState] = useState(initialState);
   
-  const rememberMe = ( verify ) => {
-    setState({...state, loading: true});
-    
-    axios 
-      .post('/elsegch/remember-me', { butDugaar })
-      .then(result => {
-        console.log(result.data)
-      })
-      .catch(response => {
-        setState({...state, loading : false });
-      });
-  };
+// remember me? ?????data
 
-  const googleOAuth = (token, profile) => {
+  const googleOAuth = (provider, data) => {
     setState({
       ...state,
       loading: true,
     });
 
-    if(state.email){
-      if(state.email ===  profile.email){
-        setState({
-          ...state,
-          emailVerified:true,
-          loading: false,
-        })
-        localStorage.setItem("Aemail",state.email);
-        localStorage.setItem("EmailV", true);
-        return ;
-      }else{
-        setState({
-          ...state,
-          error : "Буруу и-мэйл хаяг байна",
-          emailVerified:false,
-          loading: false,
-        })
-        return ;
-      }
-    }
+    
     axios.post('/s-alba/google', {
-        token,
+      provider, data,
       }).then((response) => {
           console.log(response.data)
         let obj = response.data.data;
@@ -94,7 +64,7 @@ export const AdminStore = (props) => {
 
   return (
     <AdminContext.Provider
-      value={{ state, rememberMe, googleOAuth, logout, autoLogin }} >
+      value={{ state, googleOAuth, logout, autoLogin }} >
       {props.children}
     </AdminContext.Provider>
   );

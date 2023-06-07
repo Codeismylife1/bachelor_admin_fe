@@ -27,10 +27,10 @@ const Home = () => {
           <Widget type="order"  amount={100} title={"Нийт элсэгч"}/>
           </div>
           <div className={css.charts} >
-            <Chart />
+            {/* <Chart /> */}
             {/* maybe later we will seee */}
             {/* <Dugui /> */}
-            <Graphic aspect={4/3} />
+            {/* <Graphic aspect={4/3} /> */}
           </div>
 
           {/* magadgui hezee ch ashiglagdahgui baij magad etseg tenger nomch ah haraad shiideh bui za  */}

@@ -2,15 +2,16 @@ import { useState, useEffect } from 'react'
 import axios from './../utils/axios'
 
 export default () => {
-  const [hutulburs, setHutulburs] = useState([]);
+  const [elsegch, setElsegch] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setLoading(true);
-    axios.get(`/hutulbur`)
+    axios.get(`/elsegch`)
       .then(result => {
-        setHutulburs(result.data.data);
+
+        setElsegch(result.data.data);
         setError(null);
         setLoading(false);
       })
@@ -30,5 +31,5 @@ export default () => {
       }).finally(() => setLoading(false));
   }, []);
 
-  return [hutulburs, loading, error];
+  return [elsegch, loading, error];
 }

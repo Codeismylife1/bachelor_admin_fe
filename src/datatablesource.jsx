@@ -1,12 +1,13 @@
 export const userColumns = [
+
   { field: "id",headerName: "ID", width: "10" },
-  { field: "butDugaar",headerName: "Бүртгэлийн дугаар", width: "150" },
+  { field: "burtgel_Id",headerName: "Бүртгэлийн/Д", width: "100" },
   {
-    field: "user",
+    field: "ovog_ner",
     headerName: "Овог нэр",
     width: 150,
     renderCell: (params) => {
-      return <div className="cellWithImg">{params.row.username}</div>;
+      return <div className="cellWithImg">{params.row.ovog_ner}</div>;
     },
   },
   {
@@ -15,23 +16,23 @@ export const userColumns = [
     width: 170,
   },
   {
-    field: "rDugaar",
+    field: "rd",
     headerName: "Регистрийн дугаар",
     width: 150,
   },
   {
-    field: "phoneNumber",
+    field: "utas",
     headerName: "Утасны дугаар",
     width: 120,
   },
 
   {
-    field: "major",
+    field: "songoson_mergejil",
     headerName: "Сонгосон мэргэжлүүд",
     width: 190,
   },
   {
-    field: "aimag",
+    field: "aimag_ner",
     headerName: "Аймгийн мэдээлэл",
     width: 210,
   },
@@ -52,163 +53,108 @@ export const userColumns = [
 
 // elsegchiin data
 export const userRows = [
+ 
   {
     id: 1,
-    butDugaar: 123456789,
-    username: "Баатарцогт Анхбаяр",
+    burtgel_Id: 123456789,
+    ovog_ner: "Баатарцогт Анхбаяр",
     img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
     email: "anhaa@gmail.com",
-    aimag: "Баянхонгор",
-    phoneNumber: "90808080",
-    major: "Математик , Монгол хэл",
-    rDugaar: "MA01291200",
+    aimag_ner: "Баянхонгор",
+    utas: "90808080",
+    songoson_mergejil: "Математик , Монгол хэл",
+    rd: "MA01291200",
     age: 20,
   },
 
   {
     id: 2,
-    butDugaar: 123456789,
-
-    username: "Ганаа",
+    burtgel_Id: 123456789,
+    ovog_ner: "Баатарцогт Анхбаяр",
     img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "1snow@gmail.com",
-    aimag: "baynhongor",
-    phoneNumber: "90909090",
-    major: " asdasdas",
-    rDugaar: "MA01291200",
-    age: 35,
+    email: "anhaa@gmail.com",
+    aimag_ner: "Баянхонгор",
+    utas: "90808080",
+    songoson_mergejil: "Математик , Монгол хэл",
+    rd: "MA01291200",
+    age: 20,
   },
 
   {
-    id: 3,
-    butDugaar: 123456789,
-
-    username: "Анхаа",
+    id:3,
+    burtgel_Id: 123456789,
+    ovog_ner: "Баатарцогт Анхбаяр",
     img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "1snow@gmail.com",
-    aimag: "baynhongor",
-    phoneNumber: "90909090",
-    major: " asdasdas",
-    rDugaar: "MA01291200",
-    age: 35,
+    email: "anhaa@gmail.com",
+    aimag_ner: "Баянхонгор",
+    utas: "90808080",
+    songoson_mergejil: "Математик , Монгол хэл",
+    rd: "MA01291200",
+    age: 20,
   },
 
   {
-    id: 4,
-    username: "Цэцгээ",    butDugaar: 123456789,
-
+    id:4,
+    burtgel_Id: 123456789,
+    ovog_ner: "Баатарцогт Анхбаяр",
     img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "1snow@gmail.com",
-    aimag: "baynhongor",
-    phoneNumber: "90909090",
-    major: " asdasdas",
-    rDugaar: "MA01291200",
-    age: 35,
+    email: "anhaa@gmail.com",
+    aimag_ner: "Баянхонгор",
+    utas: "90808080",
+    songoson_mergejil: "Математик , Монгол хэл",
+    rd: "MA01291200",
+    age: 20,
+  },
+  {
+    id:5,
+    burtgel_Id: 123456789,
+    ovog_ner: "Баатарцогт Анхбаяр",
+    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    email: "anhaa@gmail.com",
+    aimag_ner: "Баянхонгор",
+    utas: "90808080",
+    songoson_mergejil: "Математик , Монгол хэл",
+    rd: "MA01291200",
+    age: 20,
+  },
+  {
+    id:6,
+    burtgel_Id: 123456789,
+    ovog_ner: "Баатарцогт Анхбаяр",
+    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    email: "anhaa@gmail.com",
+    aimag_ner: "Баянхонгор",
+    utas: "90808080",
+    songoson_mergejil: "Математик , Монгол хэл",
+    rd: "MA01291200",
+    age: 20,
   },
 
   {
-    id: 5,
-    username: "Jorj",    butDugaar: 123456789,
-
+    id:7,
+    burtgel_Id: 123456789,
+    ovog_ner: "Баатарцогт Анхбаяр",
     img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "1snow@gmail.com",
-    aimag: "baynhongor",
-    phoneNumber: "90909090",
-    major: " asdasdas",
-    rDugaar: "MA01291200",
-    age: 35,
+    email: "anhaa@gmail.com",
+    aimag_ner: "Баянхонгор",
+    utas: "90808080",
+    songoson_mergejil: "Математик , Монгол хэл",
+    rd: "MA01291200",
+    age: 20,
   },
-
   {
-    id: 6,
-    username: "Snow",    butDugaar: 123456789,
-
+    id:8,
+    burtgel_Id: 123456789,
+    ovog_ner: "Баатарцогт Анхбаяр",
     img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "1snow@gmail.com",
-    aimag: "baynhongor",
-    phoneNumber: "90909090",
-    major: " asdasdas",
-    rDugaar: "MA01291200",
-    age: 35,
+    email: "anhaa@gmail.com",
+    aimag_ner: "Баянхонгор",
+    utas: "90808080",
+    songoson_mergejil: "Математик , Монгол хэл",
+    rd: "MA01291200",
+    age: 20,
   },
-
-  {
-    id: 7,
-    username: "Snow",    butDugaar: 123456789,
-
-    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "1snow@gmail.com",
-    aimag: "baynhongor",
-    phoneNumber: "90909090",
-    major: " asdasdas",
-    rDugaar: "MA01291200",
-    age: 35,
-  },
-
-  {
-    id: 8,
-    username: "Snow",    butDugaar: 123456789,
-
-    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "1snow@gmail.com",
-    aimag: "baynhongor",
-    phoneNumber: "90909090",
-    major: " asdasdas",
-    rDugaar: "MA01291200",
-    age: 35,
-  },
-
-  {
-    id: 9,
-    username: "Snow",    butDugaar: 123456789,
-
-    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "1snow@gmail.com",
-    aimag: "baynhongor",
-    phoneNumber: "90909090",
-    major: " asdasdas",
-    rDugaar: "MA01291200",
-    age: 35,
-  },
-
-  {
-    id: 10,
-    username: "Snow",    butDugaar: 123456789,
-
-    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "1snow@gmail.com",
-    aimag: "baynhongor",
-    phoneNumber: "90909090",
-    major: " asdasdas",
-    rDugaar: "MA01291200",
-    age: 35,
-  },
-
-  {
-    id: 11,
-    username: "Snow",    butDugaar: 123456789,
-
-    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "1snow@gmail.com",
-    aimag: "baynhongor",
-    phoneNumber: "90909090",
-    major: " asdasdas",
-    rDugaar: "MA01291200",
-    age: 35,
-  },
-
-  {
-    id: 12,
-    username: "Snow",    butDugaar: 123456789,
-
-    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "1snow@gmail.com",
-    aimag: "baynhongor",
-    phoneNumber: "90909090",
-    major: " asdasdas",
-    rDugaar: "MA01291200",
-    age: 35,
-  },
+  
 ];
 
 export const schoolColumns = [
@@ -248,25 +194,24 @@ export const schoolRows = [
   },
 ];
 export const programColumns = [
-  { field: "id", headerName: "Хөтөлбөрийн дугаар", width: "10" },
-  { field: "hutDugaar", headerName: "Хөтөлбөрийн дугаар", width: "200" },
+  { field: "id", headerName: "Х/Д", width: "10" },
   {
-    field: "hutulburName",
+    field: "name",
     headerName: "Хөтөлбөрийн нэр",
     width: 200,
   },
   {
-    field: "time",
+    field: "s_time",
     headerName: "Сурах хугацаа",
-    width: 230,
+    width: 100,
   },
   {
-    field: "onoo",
+    field: "bosgo_onoo",
     headerName: "Босго оноо",
-    width: 230,
+    width: 150,
   },
   {
-    field: "surID",
+    field: "s_name",
     headerName: "Сургуулийн ID",
     width: 230,
   },
@@ -276,39 +221,42 @@ export const programRows = [
   {
     id: 1,
     hutDugaar:"1",
-    hutulburName: "Snow",
-    time: "1snow@gmail.com",
-    onoo: "baynhongor",
-    surID: "baynhongor",
+    name: "Snow",
+    s_time: "4",
+    bosgo_onoo: "480",
+    s_name: "ИХ ЗАСАГ ХУУЛЬ ЗҮЙН СУРГУУЛЬ",
   },
   {
     id: 2,
     hutDugaar:"1",
-    hutulburName: "Snow",
-    time: "1snow@gmail.com",
-    onoo: "baynhongor",
-    surID: "baynhongor",
+    name: "Snow",
+    s_time: "4",
+    bosgo_onoo: "480",
+    s_name: "САНХҮҮ ЭДИЙН ЗАСГИЙН СУРГУУЛЬ",
   },
 
 ];
 
 export const majorColumns = [
-  { field: "id", headerName: "Хөтөлбөрийн дугаар", width: "10" },
-  { field: "dugaar", headerName: "Хөтөлбөрийн дугаар", width: "200" },
-
+  { field: "id", headerName: "Мэргэжлийн дугаар", width: "10" },
   {
-    field: "hutulburName",
-    headerName: "Хөтөлбөрийн нэр",
-    width: 200,
+    field: "name",
+    headerName: "Мэргэжлийн нэр",
+    width: 300,
   },
   {
     field: "mergeshil",
     headerName: "Мэргэшил",
+    width: 330,
+  },
+  {
+    field: "hname",
+    headerName: "Хөтөлбөрийн нэр",
     width: 230,
   },
   {
-    field: "hutID",
-    headerName: "Хөтөлбөрийн ID",
+    field: "sname",
+    headerName: "Сургуулийн нэр",
     width: 230,
   },
 ];
@@ -317,17 +265,21 @@ export const majorRows = [
   {
     dugaar: 1,
     id:1,
-    hutulburName: "Snow",
-    mergeshil: "1snow@gmail.com",
-    hutID: "baynhongor",
+    name: "Гадаад худалдаа гаалийн менежмент",
+    mergeshil: "Элчин сайдын яамны худалдааны атташе, олон улсын байгууллагын худалдааны ажилтан, дэлгүүр худалдааны байгууллагуудын худалдааны мэргэжилтэн гэх мэт",
+    hname: "Нягтлан бодох бүртгэл",
+    sname: "ЖЭСАН ЧИНГИС ХААН ГАДААД ХЭЛ СОЁЛЫН СУРГУУЛЬ",
+    
   },
   {
     dugaar: 2,
     id:2,
-    hutulburName: "Snow",
-    mergeshil: "1snow@gmail.com",
-    hutID: "baynhongor",
-  },
+    name: "Бизнесийн удирдлага",
+    mergeshil: "Төслийн менежер, мэргэжилтэн, стратеги төлөвлөлтийн мэргэжилтэн, байгууллагын бүх шатны менежер, мэргэжилтэн, бизнесийн зөвлөх, үндсэн үйл ажиллагааны менежер, мэргэжилтэн гэх мэт",
+    hname: "Аюулгүй байдал хууль сахиулах",
+    sname: "ЖЭСАН ЧИНГИС ХААН ГАДААД ХЭЛ СОЁЛЫН СУРГУУЛЬ",
+    
+  }
 
 ];
 

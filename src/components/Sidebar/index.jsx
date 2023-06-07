@@ -56,7 +56,7 @@ const Sidebar = () => {
               <span> Элсэгчид</span>
             </li>
           </Link>
-          <Link to="/viewComis" style={{ textDecoration: "none" }}>
+          {/* <Link to="/viewComis" style={{ textDecoration: "none" }}>
             <p className={css.title}> КОМИСС</p>
             <li>
               <PersonSearchIcon className={css.icon} />
@@ -70,7 +70,7 @@ const Sidebar = () => {
 
               <span> Комисс томилох</span>
             </li>
-          </Link>
+          </Link> */}
           <Link to="/graphics" style={{ textDecoration: "none" }}>
             <p className={css.title}> ХҮСНЭГТ </p>
             <li>

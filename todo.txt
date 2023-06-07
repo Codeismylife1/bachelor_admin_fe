@@ -1,8 +1,13 @@
 ## npm i axios 
 
 
-npm i reactjs-social-login
+## npm i reactjs-social-login
+## hiisen
 
+
+shuult 
+!! aimag elsegchdiin too bosoogoor
+!! mergejileer mergejiliig songoson too
 
 
 
@@ -12,7 +17,13 @@ deerh zuilsiig hiih
 
 doorhiig JAK
 
-husnegtiin talbaruudiig avchrana    
-sql query gee bichne
+husnegtiin talbaruudiig avchrana    almost done
+sql query gee bichne zassan
 toonuudiig avchrana
 toonuudaa graph 
+
+*********doodliin doorhiig HONsan***********
+6.8
+table uudiig export excel bolgoh
+buh graph  aa aytaiihan hiih  
+

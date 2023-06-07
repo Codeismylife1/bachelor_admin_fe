@@ -5,13 +5,18 @@ import "./index.scss"
 import Sidebar from "../../components/Sidebar";
 import DataTable from "../../components/DataTable";
 import { majorColumns, majorRows } from "../../datatablesource";
-
+import useMergejils from './../../Hooks/useMergejils';
+import Loading from './../../components/Loader';
 const Major = () => {
+  const [mergejils, loading, error] = useMergejils()
   return <div className="home">
   <Sidebar />
   <div className="homeContainer">
     <MyContainer>
+   
       <Header name="МЭРГЭЖЛҮҮД"></Header>
+      {loading && <loading />}
+      {error && <div className="error">{error}</div>}
         <DataTable title="Нийт мэргэжлүүд" rows={majorRows} columns={majorColumns}  type ="major"/>
     </MyContainer>
   </div>

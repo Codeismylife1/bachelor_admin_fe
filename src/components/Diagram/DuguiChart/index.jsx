@@ -2,10 +2,15 @@ import React, { useCallback, useState } from "react";
 import { PieChart, Pie, Sector } from "recharts";
 
 const data = [
-  { name: "Group A", value: 400 },
-  { name: "Group B", value: 300 },
-  { name: "Group C", value: 300 },
-  { name: "Group D", value: 200 }
+  { name: "Group 1", value: 400 },
+  { name: "Group 2", value: 300 },
+  { name: "Group 3", value: 300 },
+  { name: "Group 4", value: 200 },
+  { name: "Group 5", value: 200 },
+  { name: "Group 6", value: 200 },
+  { name: "Group 7", value: 200 },
+  { name: "Group 8", value: 200 },
+  { name: "Group 9", value: 200 }
 ];
 
 const renderActiveShape = (props) => {

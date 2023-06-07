@@ -5,13 +5,19 @@ import "./index.scss"
 import Sidebar from "../../components/Sidebar";
 import DataTable from "../../components/DataTable";
 import { programColumns, programRows } from "../../datatablesource";
-
+import Loading from './../../components/Loader';
+import useHutulburs from './../../Hooks/useHutulburs';
 const Programs = () => {
+  const [hutulburs, loading, error] = useHutulburs()
+  
   return <div className="home">
   <Sidebar />
   <div className="homeContainer">
     <MyContainer>
+      
       <Header name="ХӨТӨЛБӨРҮҮД "></Header>
+      {loading && <loading />}
+      {error && <div className="error">{error}</div>}
     <DataTable title="Нийт хөтөлбөрүүд" rows={programRows} columns ={ programColumns} type="program" />
     </MyContainer>
   </div>

@@ -19,12 +19,11 @@ import AdminContext from './../context/AdminContext';
 export default function Root() {
   const Actx = useContext(AdminContext)
   useEffect(() => {
-    const burtgel_Id = localStorage.getItem("burtgel_Id");
-    const email = localStorage.getItem("email");
-    const emailVerified = localStorage.getItem("EV");
-    // if (burtgel_Id && email) {
-    //   Ectx.autoLogin(burtgel_Id, email, emailVerified)
-    // }
+    const email = localStorage.getItem("Aemail");
+    const emailVerified = localStorage.getItem("EmailV");
+    if (email && emailVerified) {
+      Actx.autoLogin(email, emailVerified)
+    }
   }, [])
   return (
     <Routes >
