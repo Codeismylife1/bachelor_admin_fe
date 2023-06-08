@@ -1,9 +1,4 @@
 import * as React from 'react';
-import {
-  DataGridPremium,
-  GridToolbarContainer,
-  GridToolbarExport,
-} from '@mui/x-data-grid-premium';
 
 const rows = [
   {
@@ -126,13 +121,13 @@ function CustomToolbar() {
 export default function TableExcelExport() {
   return (
     <div style={{ height: 300, width: '100%' }}>
-      <DataGridPremium
+      {/* <DataGridPremium
         rows={rows}
         columns={columns}
         slots={{
           toolbar: CustomToolbar,
         }}
-      />
+      /> */}
     </div>
   );
 }

@@ -8,9 +8,8 @@ export default () => {
 
   useEffect(() => {
     setLoading(true);
-    axios.get(`/elsegch`)
+    axios.get(`/elsegch/withMergejil`)
       .then(result => {
-
         setElsegch(result.data.data);
         setError(null);
         setLoading(false);

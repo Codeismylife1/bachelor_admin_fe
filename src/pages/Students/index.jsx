@@ -6,11 +6,9 @@ import { GridToolbar } from "@mui/x-data-grid";
 import Datatable from "../../components/DataTable";
 
 import Sidebar from "../../components/Sidebar";
-import { userColumns, userRows } from "../../datatablesource";
-import MyTable from "../../components/Table";
-import ExportToExcelButton from "../../components/ExportButton";
+import { userColumns } from "../../datatablesource";
 import useElsegchid from "./../../Hooks/useElsegchid";
-import TableExcelExport from "../../components/GridDataTablePro";
+import Loading from './../../components/Loader';
 const Students = () => {
   const [elsegch, loading, error] = useElsegchid();
   return (
@@ -19,11 +17,11 @@ const Students = () => {
       <div className="homeContainer">
         <MyContainer>
           <Header name="ЭЛСЭГЧИД "></Header>
-          {loading && <loading />}
+          {loading && <Loading />}
           {error && <div className="error">{error}</div>}
-          < Datatable   
-      searchTitle="Овог нэрээр хайна уу"
-        slots={{ toolbar: GridToolbar }} rows = {userRows} columns ={ userColumns}  title="Нийт бүртгүүлсэн элсэгчид" search/>
+          <Datatable
+            searchTitle="Овог нэрээр хайна уу"
+            slots={{ toolbar: GridToolbar }} rows={elsegch} columns={userColumns} title="Нийт бүртгүүлсэн элсэгчид" search />
           {/* latteeer */}
           {/* <ExportToExcelButton data={userRows} /> */}
         </MyContainer>

@@ -8,9 +8,18 @@ export default () => {
 
   useEffect(() => {
     setLoading(true);
-    axios.get(`/hutulbur`)
+    axios.get(`/hutulbur?select=id name s_time bosgo_onoo`)
       .then(result => {
-        setHutulburs(result.data.data);
+        let hutulbur = result.data.data.map(el => {
+          return {
+            id: el.id,
+            name: el.name,
+            s_time: el.s_time,
+            bosgo_onoo: el.bosgo_onoo,
+            s_name: el.School.name
+          }
+        })
+        setHutulburs(hutulbur);
         setError(null);
         setLoading(false);
       })

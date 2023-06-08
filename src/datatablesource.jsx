@@ -1,7 +1,9 @@
+import School from "@mui/icons-material/School";
+
 export const userColumns = [
 
-  { field: "id",headerName: "ID", width: "10" },
-  { field: "burtgel_Id",headerName: "Бүртгэлийн/Д", width: "100" },
+  { field: "id", headerName: "id", width: "10" },
+  { field: "burtgel_Id", headerName: "Бүртгэлийн/Д", width: "100" },
   {
     field: "ovog_ner",
     headerName: "Овог нэр",
@@ -18,7 +20,7 @@ export const userColumns = [
   {
     field: "rd",
     headerName: "Регистрийн дугаар",
-    width: 150,
+    width: 100,
   },
   {
     field: "utas",
@@ -29,31 +31,18 @@ export const userColumns = [
   {
     field: "songoson_mergejil",
     headerName: "Сонгосон мэргэжлүүд",
-    width: 190,
+    width: 700,
   },
   {
     field: "aimag_ner",
     headerName: "Аймгийн мэдээлэл",
     width: 210,
   },
-
-  // {
-  //   field: "status",
-  //   headerName: "Status",
-  //   width: 160,
-  //   renderCell: (params) => {
-  //     return (
-  //       <div className={`cellWithStatus ${params.row.status}`}>
-  //         {params.row.status}
-  //       </div>
-  //     );
-  //   },
-  // },
 ];
 
 // elsegchiin data
 export const userRows = [
- 
+
   {
     id: 1,
     burtgel_Id: 123456789,
@@ -81,7 +70,7 @@ export const userRows = [
   },
 
   {
-    id:3,
+    id: 3,
     burtgel_Id: 123456789,
     ovog_ner: "Баатарцогт Анхбаяр",
     img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
@@ -94,7 +83,7 @@ export const userRows = [
   },
 
   {
-    id:4,
+    id: 4,
     burtgel_Id: 123456789,
     ovog_ner: "Баатарцогт Анхбаяр",
     img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
@@ -106,7 +95,7 @@ export const userRows = [
     age: 20,
   },
   {
-    id:5,
+    id: 5,
     burtgel_Id: 123456789,
     ovog_ner: "Баатарцогт Анхбаяр",
     img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
@@ -118,7 +107,7 @@ export const userRows = [
     age: 20,
   },
   {
-    id:6,
+    id: 6,
     burtgel_Id: 123456789,
     ovog_ner: "Баатарцогт Анхбаяр",
     img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
@@ -131,7 +120,7 @@ export const userRows = [
   },
 
   {
-    id:7,
+    id: 7,
     burtgel_Id: 123456789,
     ovog_ner: "Баатарцогт Анхбаяр",
     img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
@@ -143,7 +132,7 @@ export const userRows = [
     age: 20,
   },
   {
-    id:8,
+    id: 8,
     burtgel_Id: 123456789,
     ovog_ner: "Баатарцогт Анхбаяр",
     img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
@@ -154,15 +143,15 @@ export const userRows = [
     rd: "MA01291200",
     age: 20,
   },
-  
+
 ];
 
 export const schoolColumns = [
-  { field: "Id", headerName: "id", width: "10" },
+  { field: "id", headerName: "id", width: "10" },
   {
     field: "name",
     headerName: "Сургуулийн нэр",
-    width: 230,
+    width: 400,
   },
   {
     field: "slug",
@@ -174,7 +163,7 @@ export const schoolColumns = [
     headerName: "Website",
     width: 230,
   },
- 
+
 ];
 
 // data
@@ -198,7 +187,7 @@ export const programColumns = [
   {
     field: "name",
     headerName: "Хөтөлбөрийн нэр",
-    width: 200,
+    width: 350,
   },
   {
     field: "s_time",
@@ -208,31 +197,31 @@ export const programColumns = [
   {
     field: "bosgo_onoo",
     headerName: "Босго оноо",
-    width: 150,
+    width: 100,
   },
   {
     field: "s_name",
-    headerName: "Сургуулийн ID",
-    width: 230,
+    headerName: "Сургуулийн нэр",
+    width: 330,
   },
 ];
 
 export const programRows = [
   {
     id: 1,
-    hutDugaar:"1",
+    hutDugaar: "1",
     name: "Snow",
     s_time: "4",
     bosgo_onoo: "480",
-    s_name: "ИХ ЗАСАГ ХУУЛЬ ЗҮЙН СУРГУУЛЬ",
+    "School.name": "ИХ ЗАСАГ ХУУЛЬ ЗҮЙН СУРГУУЛЬ",
   },
   {
     id: 2,
-    hutDugaar:"1",
+    hutDugaar: "1",
     name: "Snow",
     s_time: "4",
     bosgo_onoo: "480",
-    s_name: "САНХҮҮ ЭДИЙН ЗАСГИЙН СУРГУУЛЬ",
+    "School.name": "САНХҮҮ ЭДИЙН ЗАСГИЙН СУРГУУЛЬ",
   },
 
 ];
@@ -240,7 +229,7 @@ export const programRows = [
 export const majorColumns = [
   { field: "id", headerName: "Мэргэжлийн дугаар", width: "10" },
   {
-    field: "name",
+    field: "m_name",
     headerName: "Мэргэжлийн нэр",
     width: 300,
   },
@@ -250,12 +239,12 @@ export const majorColumns = [
     width: 330,
   },
   {
-    field: "hname",
+    field: "h_name",
     headerName: "Хөтөлбөрийн нэр",
     width: 230,
   },
   {
-    field: "sname",
+    field: "s_name",
     headerName: "Сургуулийн нэр",
     width: 230,
   },
@@ -264,22 +253,21 @@ export const majorColumns = [
 export const majorRows = [
   {
     dugaar: 1,
-    id:1,
+    id: 1,
     name: "Гадаад худалдаа гаалийн менежмент",
     mergeshil: "Элчин сайдын яамны худалдааны атташе, олон улсын байгууллагын худалдааны ажилтан, дэлгүүр худалдааны байгууллагуудын худалдааны мэргэжилтэн гэх мэт",
     hname: "Нягтлан бодох бүртгэл",
     sname: "ЖЭСАН ЧИНГИС ХААН ГАДААД ХЭЛ СОЁЛЫН СУРГУУЛЬ",
-    
+
   },
   {
     dugaar: 2,
-    id:2,
+    id: 2,
     name: "Бизнесийн удирдлага",
     mergeshil: "Төслийн менежер, мэргэжилтэн, стратеги төлөвлөлтийн мэргэжилтэн, байгууллагын бүх шатны менежер, мэргэжилтэн, бизнесийн зөвлөх, үндсэн үйл ажиллагааны менежер, мэргэжилтэн гэх мэт",
     hname: "Аюулгүй байдал хууль сахиулах",
     sname: "ЖЭСАН ЧИНГИС ХААН ГАДААД ХЭЛ СОЁЛЫН СУРГУУЛЬ",
-    
+
   }
 
 ];
-

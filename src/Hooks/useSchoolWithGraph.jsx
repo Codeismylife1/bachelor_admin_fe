@@ -2,15 +2,15 @@ import { useState, useEffect } from 'react'
 import axios from './../utils/axios'
 
 export default () => {
-  const [schools, setSchools] = useState([]);
+  const [graph, setGraph] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setLoading(true);
-    axios.get(`/school?select=id name link slug`)
+    axios.get(`/burtgel/schoolAndCount`)
       .then(result => {
-        setSchools(result.data.data);
+        setGraph(result.data.data);
         setError(null);
         setLoading(false);
       })
@@ -31,5 +31,5 @@ export default () => {
       }).finally(() => setLoading(false));
   }, []);
 
-  return [schools, loading, error];
+  return [graph, loading, error];
 }

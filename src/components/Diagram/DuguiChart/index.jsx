@@ -1,17 +1,20 @@
 import React, { useCallback, useState } from "react";
 import { PieChart, Pie, Sector } from "recharts";
+import useSchoolWithGraph from "../../../Hooks/useSchoolWithGraph";
+import Loading from './../../Loader';
 
-const data = [
-  { name: "Group 1", value: 400 },
-  { name: "Group 2", value: 300 },
-  { name: "Group 3", value: 300 },
-  { name: "Group 4", value: 200 },
-  { name: "Group 5", value: 200 },
-  { name: "Group 6", value: 200 },
-  { name: "Group 7", value: 200 },
-  { name: "Group 8", value: 200 },
-  { name: "Group 9", value: 200 }
-];
+
+// const data = [
+//   { name: "Group 1", value: 400 },
+//   { name: "Group 2", value: 300 },
+//   { name: "Group 3", value: 300 },
+//   { name: "Group 4", value: 200 },
+//   { name: "Group 5", value: 200 },
+//   { name: "Group 6", value: 200 },
+//   { name: "Group 7", value: 200 },
+//   { name: "Group 8", value: 200 },
+//   { name: "Group 9", value: 200 }
+// ];
 
 const renderActiveShape = (props) => {
   const RADIAN = Math.PI / 180;
@@ -40,7 +43,7 @@ const renderActiveShape = (props) => {
 
   return (
     <g>
-      <text x={cx} y={cy} dy={8} textAnchor="middle" fill={fill}>
+      <text x={cx} y={cy} dy={8} textAnchor="middle" fill={"#111111"}>
         {payload.name}
       </text>
       <Sector
@@ -71,8 +74,8 @@ const renderActiveShape = (props) => {
         x={ex + (cos >= 0 ? 1 : -1) * 12}
         y={ey}
         textAnchor={textAnchor}
-        fill="#333"
-      >{`PV ${value}`}</text>
+        fill="#111"
+      >{` ${value} Элсэлт`}</text>
       <text
         x={ex + (cos >= 0 ? 1 : -1) * 12}
         y={ey}
@@ -80,7 +83,7 @@ const renderActiveShape = (props) => {
         textAnchor={textAnchor}
         fill="#999"
       >
-        {`(Rate ${(percent * 100).toFixed(2)}%)`}
+        {`(Нийт элсэлтийн ${(percent * 100).toFixed(2)}%)`}
       </text>
     </g>
   );
@@ -94,14 +97,21 @@ const DuguiChart = () => {
     },
     []
   );
-
+  const [graph, loading, error] = useSchoolWithGraph()
+  // school data
+  if (loading) {
+    return <Loading />
+  }
+  if (error) {
+    return (<div className="error">{error}</div>)
+  }
   return (
-    <PieChart width={400} height={400}>
+    <PieChart width={600} height={400}>
       <Pie
         activeIndex={activeIndex}
         activeShape={renderActiveShape}
-        data={data}
-        cx={200}
+        data={graph}
+        cx={250}
         cy={200}
         innerRadius={60}
         outerRadius={80}

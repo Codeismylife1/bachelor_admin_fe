@@ -21,7 +21,7 @@ const Graphics = () => {
           {/* 
       <ChartComponent data={chartData} />
       <Chart /> */}
-        <MyGrid / >
+          <MyGrid />
         </MyContainer>
       </div>
     </div>

@@ -40,13 +40,16 @@ const DataTable = (props) => {
   ];
   const [data, setData] = useState(props.rows);
 
-  function getValueFromInput() {}
+  function getValueFromInput() { }
   const [tfValue, setTFValue] = useState("");
 
   const handleDelete = (id) => {
     setData(data.filter((item) => item.id !== id));
   };
-  console.log(tfValue);
+  // let filteredData = [];
+  // filteredData = props.rows.filter((item) => {
+  //   return item.ovog_ner.toLowerCase().includes(tfValue.toLocaleLowerCase());
+  // });
   return (
     <div className="datatable">
       <div className="datatableTitle">
@@ -54,7 +57,7 @@ const DataTable = (props) => {
         {props.search ? (
           <TextField
             size="small"
-            onChange={(newValue) => setTFValue(newValue.target.value)}
+            onChange={(e) => setTFValue(e.target.value)}
             id="outlined-basic"
             label={`${props.searchTitle}`}
             variant="outlined"
@@ -98,9 +101,7 @@ const DataTable = (props) => {
 
         //  />)
         <MyDataGrid
-          rows={data.filter((e) => {
-            return e.username.toLowerCase().includes(tfValue.toLowerCase());
-          })}
+          rows={data}
           columns={props.columns}
         />
       )}
