@@ -4,7 +4,6 @@ import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 
-import MySnackBar from '../SnackBar';
 
 const style = {
   position: 'absolute',
