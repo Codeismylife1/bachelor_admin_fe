@@ -21,7 +21,7 @@ const Students = () => {
           {error && <div className="error">{error}</div>}
           <Datatable
             searchTitle="Овог нэрээр хайна уу"
-            slots={{ toolbar: GridToolbar }} rows={elsegch} columns={userColumns} title="Нийт бүртгүүлсэн элсэгчид" search />
+            slots={{ toolbar: GridToolbar }} rows={elsegch} columns={userColumns} title="Нийт бүртгүүлсэн элсэгчид" search  />
           {/* latteeer */}
           {/* <ExportToExcelButton data={userRows} /> */}
         </MyContainer>

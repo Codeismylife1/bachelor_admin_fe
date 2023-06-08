@@ -5,39 +5,55 @@ import * as XLSX from "xlsx";
 import { Button, Icon, Popover, Typography } from "@mui/material";
 import { Archive, MoreVert } from "@mui/icons-material";
 
-const ExportToExcelButton = (props) => {
+const TableToExcel = (props) => {
   const exportToExcel = () => {
     const formattedData = props.data.map((item) => {
       // Modify the data as per your requirement
-      if(props.type ==='bosoo')
-      {
+      if(props.type === "major"){
+
         return {
-          name: item.name,
-          Элсэгчид: item.Элсэгчид,
+          id: item.id,
+          "Мэргэжлийн нэр": item.m_name,
+          "Мэргэшил": item.mergeshil,
+          "Хөтөлбөрийн нэр": item.h_name,
+          "Сургуулийн нэр":item.s_name,
+         
         };
       }
-      else
-      {
-        if(props.type ==='graphic') 
+      else {
+        if(props.type ==='schools')
         {
           return {
-            name: item.name,
-            Элсэгчид: item.нийт,
+            id: item.id,
+            "Сургуулийн нэр": item.name,
+            "Товч нэр":item.slug,
+            "Вэб хуудас": item.link,
           };
-        }else 
-        {
-          if(props.type ==='dotted')
+        }
+        else {
+          if(props.type ==='program')
           {
             return {
-              name: item.name,
-              Элсэгчид: item.Элсэгч,
+              id: item.id,
+              "Хөтөлбөрийн нэр": item.name,
+              "Суралцах хугацаа": item.s_time,
+              "Босго оноо": item.bosgo_onoo,
+              "Сургуулийн нэр":item.s_name,
             };
           }
-        }
+          else
         return {
-          name: item.name,
-          value: item.value,
+          burtgeliinId: item.burtgel_Id,
+          "Овог нэр": item.ovog_ner,
+          "id": item.id,
+          "И-мэйл хаяг":item.email,
+          "Регистрийн дугаар": item.rd,
+          "Утас":item.utas,
+          "Аймаг": item.aimag_ner,
+          "Сонгосон мэргэжил" : item.songoson_mergejil,
         };
+      }
+
       }
     });
 
@@ -68,7 +84,7 @@ const ExportToExcelButton = (props) => {
   const id = open ? "simple-popover" : undefined;
   return (
     <>
-      <Button size="small" style={{color:'#8884D8',borderColor:'#8884D8'}} variant="outlined" onClick={handleClick}>
+      <Button size="small" style={{color:'royalblue',borderColor:'royalblue'}} variant="outlined" onClick={handleClick}>
         <Icon component={Archive}></Icon>
       </Button>
       <Popover
@@ -84,6 +100,7 @@ const ExportToExcelButton = (props) => {
         <Button
           variant="contained"
           onClick={exportToExcel}
+          style={{color:'white',borderColor:'royalblue',}}
         >
           Excel файл татах
         </Button>
@@ -92,4 +109,4 @@ const ExportToExcelButton = (props) => {
   );
 };
 
-export default ExportToExcelButton;
+export default TableToExcel;

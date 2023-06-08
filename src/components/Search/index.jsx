@@ -6,7 +6,7 @@ import TextField from '@mui/material/TextField';
 const Search = () => {
     
      function getValueFromInput( ) {
-        console.log(tfValue);
+        // console.log(tfValue);
      }
     const [tfValue, setTFValue] = useState("My Text");
   return (

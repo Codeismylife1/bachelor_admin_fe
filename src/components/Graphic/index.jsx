@@ -7,25 +7,34 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import useHutulburWithGraph from "./../../Hooks/useHutulburWithGraph";
 
-const data = [
-  { name: "2-р сар", Total: 1200 },
-  { name: "3-р сар", Total: 2100 },
-  { name: "4-р сар", Total: 800 },
-  { name: "5-р сар", Total: 1600 },
-  { name: "6-р сар", Total: 900 },
-  { name: "7-р сар", Total: 1700 },
-];
+import Loading from "../Loader";
+import ExportToExcelButton from "../ExportButton";
+
+const data = [{нийт:5,name:"Эрх зүй"},{нийт:2,name:"Нягтлан бодох бүртгэл"},{нийт:1,name:"Бизнесийн удирдлага"},{нийт:1,name:"Худалдаа"},{нийт:2,name:"Аюулгүй байдал-хууль сахиулах"},{нийт:5,name:"Барилгын инженер"},{нийт:2,name:"Компьютерийн программ хангамж"},{нийт:7,name:"Зураг авалт"},{нийт:4,name:"Нийгмийн шинжлэх ухаан"},{нийт:1,name:"БНСУ-ийн Кён-Ин их сургуулийн коллежтэй хамтарсан 2.5+1 жил хөтөлбөр"},{нийт:1,name:"БНСУ-ийн Кён-Ин их сургуулийн коллежтэй хамтарсан 1+1 жил хөтөлбөр"}];
 
 const Graphic = ({ aspect, title }) => {
+  const [graph, loading, error] = useHutulburWithGraph()
+
+  if(error){
+    return <div className="error">{error}</div>
+  }
   return (
     <div className="chart">
       <div className="title">{title}</div>
+      <div className='excel' >
+      <ExportToExcelButton data={graph} type="graphic" />
+      </div>
       <ResponsiveContainer width="100%" aspect={aspect}>
+      {/* {error && } */}
+        {loading ? <Loading /> :(
+
+
         <AreaChart
           width={730}
           height={250}
-          data={data}
+          data={graph}
           margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
         >
           <defs>
@@ -34,17 +43,23 @@ const Graphic = ({ aspect, title }) => {
               <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
             </linearGradient>
           </defs>
-          <XAxis dataKey="name" stroke="gray" />
+          <XAxis dataKey="name" stroke="gray" hide />
           <CartesianGrid strokeDasharray="3 3" className="chartGrid" />
           <Tooltip />
           <Area
             type="monotone"
-            dataKey="Total"
+            dataKey="нийт"
             stroke="#8884d8"
             fillOpacity={1}
             fill="url(#total)"
           />
         </AreaChart>
+        
+        
+        )
+        
+        }
+        
       </ResponsiveContainer>
     </div>
   );

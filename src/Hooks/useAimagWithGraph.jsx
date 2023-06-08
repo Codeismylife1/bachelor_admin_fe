@@ -8,7 +8,7 @@ export default () => {
 
   useEffect(() => {
     setLoading(true);
-    axios.get(`/burtgel/schoolAndCount`)
+    axios.get(`/burtgel/aimagAndCount`)
       .then(result => {
         setGraph(result.data.data);
         setError(null);

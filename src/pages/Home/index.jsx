@@ -8,7 +8,7 @@ import Chart from "../../components/Chart";
 import Graphic from "../../components/Graphic";
 import Datatable from "../../components/DataTable";
 import axios from './../../utils/axios'
-import { userColumns, userRows } from "../../datatablesource";
+import { userColumns } from "../../datatablesource";
 import { useLocation } from "react-router-dom";
 import useElsegchid from './../../Hooks/useElsegchid'
 import Loading from "../../components/Loader";

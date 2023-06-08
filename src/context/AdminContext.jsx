@@ -28,7 +28,7 @@ export const AdminStore = (props) => {
     axios.post('/s-alba/google', {
       provider, data,
       }).then((response) => {
-          console.log(response.data)
+          // console.log(response.data)
         let obj = response.data.data;
         setState({
           email : obj["email"],

@@ -4,7 +4,7 @@ import Header from "../../components/Header";
 import "./index.scss"
 import Sidebar from "../../components/Sidebar";
 import DataTable from "../../components/DataTable";
-import { schoolColumns, schoolRows } from "../../datatablesource";
+import { schoolColumns,  } from "../../datatablesource";
 
 const ToComis = () => {
   return <div className="home">

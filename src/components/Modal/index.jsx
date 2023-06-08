@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+
 import MySnackBar from '../SnackBar';
 
 const style = {
@@ -16,7 +17,7 @@ const style = {
   p: 4,
 };
 
-const  MyModal = () =>{
+const  MyModal = (props) =>{
   const [openModal, setOpenModal] = React.useState(false);
   const [openSnack, setOpenSnack] = React.useState(false);
   const handleOpenModal = () => setOpenModal(true);
@@ -28,6 +29,7 @@ const handleSnackBar = ( ) => {
     // handleCloseModal(false);
     // setOpenSnack(true);
     console.log("snack bar neew")
+    // zasah heseg
 }
 
   return (
@@ -45,7 +47,7 @@ const handleSnackBar = ( ) => {
          Сургууль засах
           </Typography>
           <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+            Энэ функц одоогоор байхгүй байна
           </Typography>
         <Button onClick={handleCloseModal}> Цуцлах</Button>
         <Button onClick={handleSnackBar}> Засах</Button>

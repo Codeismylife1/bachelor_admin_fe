@@ -15,7 +15,7 @@ export default () => {
         setLoading(false);
       })
       .catch(err => {
-        console.log('err', err)
+        // console.log('err', err)
 
         let message = err.message;
         if (message === "Request failed with status code 404")

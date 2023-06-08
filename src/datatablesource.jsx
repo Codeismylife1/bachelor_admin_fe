@@ -5,7 +5,7 @@ export const userColumns = [
   { field: "id", headerName: "id", width: "10" },
   { field: "burtgel_Id", headerName: "Бүртгэлийн/Д", width: "100" },
   {
-    field: "ovog_ner",
+    field: "user",
     headerName: "Овог нэр",
     width: 150,
     renderCell: (params) => {
@@ -40,112 +40,6 @@ export const userColumns = [
   },
 ];
 
-// elsegchiin data
-export const userRows = [
-
-  {
-    id: 1,
-    burtgel_Id: 123456789,
-    ovog_ner: "Баатарцогт Анхбаяр",
-    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "anhaa@gmail.com",
-    aimag_ner: "Баянхонгор",
-    utas: "90808080",
-    songoson_mergejil: "Математик , Монгол хэл",
-    rd: "MA01291200",
-    age: 20,
-  },
-
-  {
-    id: 2,
-    burtgel_Id: 123456789,
-    ovog_ner: "Баатарцогт Анхбаяр",
-    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "anhaa@gmail.com",
-    aimag_ner: "Баянхонгор",
-    utas: "90808080",
-    songoson_mergejil: "Математик , Монгол хэл",
-    rd: "MA01291200",
-    age: 20,
-  },
-
-  {
-    id: 3,
-    burtgel_Id: 123456789,
-    ovog_ner: "Баатарцогт Анхбаяр",
-    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "anhaa@gmail.com",
-    aimag_ner: "Баянхонгор",
-    utas: "90808080",
-    songoson_mergejil: "Математик , Монгол хэл",
-    rd: "MA01291200",
-    age: 20,
-  },
-
-  {
-    id: 4,
-    burtgel_Id: 123456789,
-    ovog_ner: "Баатарцогт Анхбаяр",
-    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "anhaa@gmail.com",
-    aimag_ner: "Баянхонгор",
-    utas: "90808080",
-    songoson_mergejil: "Математик , Монгол хэл",
-    rd: "MA01291200",
-    age: 20,
-  },
-  {
-    id: 5,
-    burtgel_Id: 123456789,
-    ovog_ner: "Баатарцогт Анхбаяр",
-    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "anhaa@gmail.com",
-    aimag_ner: "Баянхонгор",
-    utas: "90808080",
-    songoson_mergejil: "Математик , Монгол хэл",
-    rd: "MA01291200",
-    age: 20,
-  },
-  {
-    id: 6,
-    burtgel_Id: 123456789,
-    ovog_ner: "Баатарцогт Анхбаяр",
-    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "anhaa@gmail.com",
-    aimag_ner: "Баянхонгор",
-    utas: "90808080",
-    songoson_mergejil: "Математик , Монгол хэл",
-    rd: "MA01291200",
-    age: 20,
-  },
-
-  {
-    id: 7,
-    burtgel_Id: 123456789,
-    ovog_ner: "Баатарцогт Анхбаяр",
-    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "anhaa@gmail.com",
-    aimag_ner: "Баянхонгор",
-    utas: "90808080",
-    songoson_mergejil: "Математик , Монгол хэл",
-    rd: "MA01291200",
-    age: 20,
-  },
-  {
-    id: 8,
-    burtgel_Id: 123456789,
-    ovog_ner: "Баатарцогт Анхбаяр",
-    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
-    email: "anhaa@gmail.com",
-    aimag_ner: "Баянхонгор",
-    utas: "90808080",
-    songoson_mergejil: "Математик , Монгол хэл",
-    rd: "MA01291200",
-    age: 20,
-  },
-
-];
-
 export const schoolColumns = [
   { field: "id", headerName: "id", width: "10" },
   {
@@ -161,27 +55,11 @@ export const schoolColumns = [
   {
     field: "link",
     headerName: "Website",
-    width: 230,
+    width: 400,
   },
 
 ];
 
-// data
-export const schoolRows = [
-  {
-    id: 1,
-    schoolName: "Snow",
-    address: "1snow@gmail.com",
-    description: "baynhongor",
-  },
-
-  {
-    id: 2,
-    schoolName: "Ганаа",
-    address: "1snow@gmail.com",
-    description: "baynhongor",
-  },
-];
 export const programColumns = [
   { field: "id", headerName: "Х/Д", width: "10" },
   {

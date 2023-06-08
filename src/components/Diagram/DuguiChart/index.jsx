@@ -1,9 +1,10 @@
 import React, { useCallback, useState } from "react";
 import { PieChart, Pie, Sector } from "recharts";
 import useSchoolWithGraph from "../../../Hooks/useSchoolWithGraph";
-import Loading from './../../Loader';
+import Loading from "./../../Loader";
+import ExportToExcelButton from "../../ExportButton";
 
-
+import css from "./index.module.scss";
 // const data = [
 //   { name: "Group 1", value: 400 },
 //   { name: "Group 2", value: 300 },
@@ -29,7 +30,7 @@ const renderActiveShape = (props) => {
     fill,
     payload,
     percent,
-    value
+    value,
   } = props;
   const sin = Math.sin(-RADIAN * midAngle);
   const cos = Math.cos(-RADIAN * midAngle);
@@ -91,35 +92,37 @@ const renderActiveShape = (props) => {
 
 const DuguiChart = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const onPieEnter = useCallback(
-    (_, index) => {
-      setActiveIndex(index);
-    },
-    []
-  );
-  const [graph, loading, error] = useSchoolWithGraph()
+  const onPieEnter = useCallback((_, index) => {
+    setActiveIndex(index);
+  }, []);
+  const [graph, loading, error] = useSchoolWithGraph();
   // school data
   if (loading) {
-    return <Loading />
+    return <Loading />;
   }
   if (error) {
-    return (<div className="error">{error}</div>)
+    return <div className={css.error}>{error}</div>;
   }
   return (
-    <PieChart width={600} height={400}>
-      <Pie
-        activeIndex={activeIndex}
-        activeShape={renderActiveShape}
-        data={graph}
-        cx={250}
-        cy={200}
-        innerRadius={60}
-        outerRadius={80}
-        fill="#8884d8"
-        dataKey="value"
-        onMouseEnter={onPieEnter}
-      />
-    </PieChart>
+    <div>
+      <div className={css.excel} >
+      <ExportToExcelButton data={graph} />
+      </div>
+      <PieChart width={600} height={400}>
+        <Pie
+          activeIndex={activeIndex}
+          activeShape={renderActiveShape}
+          data={graph}
+          cx={250}
+          cy={200}
+          innerRadius={80}
+          outerRadius={100}
+          fill="#8884d8"
+          dataKey="value"
+          onMouseEnter={onPieEnter}
+        />
+      </PieChart>
+    </div>
   );
 };
 

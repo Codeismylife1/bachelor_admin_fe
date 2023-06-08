@@ -4,7 +4,7 @@ import Header from "../../components/Header";
 import "./index.jsx"
 import Sidebar from "../../components/Sidebar";
 import DataTable from "../../components/DataTable";
-import { schoolColumns, schoolRows } from "../../datatablesource";
+import { schoolColumns,  } from "../../datatablesource";
 import TransitionAlerts from "../../components/Alert";
 import MySnackBar from "../../components/SnackBar";
 

@@ -8,58 +8,27 @@ import {
   Tooltip,
   Legend
 } from "recharts";
+import Loading from "../../Loader";
+import useMergejilWithGraph from './../../../Hooks/useMergejilWithGraph'
 
-const data = [
-  {
-    name: "Page A",
-    uv: 4000,
-    pv: 2400,
-    amt: 2400
-  },
-  {
-    name: "Page B",
-    uv: 3000,
-    pv: 1398,
-    amt: 2210
-  },
-  {
-    name: "Page C",
-    uv: 2000,
-    pv: 9800,
-    amt: 2290
-  },
-  {
-    name: "Page D",
-    uv: 2780,
-    pv: 3908,
-    amt: 2000
-  },
-  {
-    name: "Page E",
-    uv: 1890,
-    pv: 4800,
-    amt: 2181
-  },
-  {
-    name: "Page F",
-    uv: 2390,
-    pv: 3800,
-    amt: 2500
-  },
-  {
-    name: "Page G",
-    uv: 3490,
-    pv: 4300,
-    amt: 2100
-  }
-];
+import css from './index.module.scss'
+import ExportToExcelButton from "../../ExportButton";
 
 const BosooChart = () => {
+  const [graph, loading, error] = useMergejilWithGraph();
+  
+  if (loading) return <Loading />
+  if (error) return <p>{error}</p>;
+  
   return (
+    <div style={{ width: "500px", overflowX: "auto" }} >
+ <div className={css.excel} >
+      <ExportToExcelButton data={graph} type="bosoo"/>
+      </div>
     <BarChart
       width={500}
       height={400}
-      data={data}
+      data={graph}
       margin={{
         top: 5,
         right: 30,
@@ -68,13 +37,17 @@ const BosooChart = () => {
       }}
       barSize={20}
     >
-      <XAxis dataKey="name" scale="point" padding={{ left: 10, right: 10 }} />
+      {/* duusad calldaarai
+       */}
+      <XAxis  dataKey="name" scale="auto" padding={{ left: 5, right: 5 }} />
       <YAxis />
       <Tooltip />
       <Legend />
-      <CartesianGrid strokeDasharray="3 3" />
-      <Bar dataKey="pv" fill="#8884d8" background={{ fill: "#eee" }} />
+      <CartesianGrid strokeDasharray="2 2" />
+      <Bar dataKey="Элсэгчид" fill="#8884d8" background={{ fill: "#eee" }} />
     </BarChart>
+    </div>
+
   );
 };
 

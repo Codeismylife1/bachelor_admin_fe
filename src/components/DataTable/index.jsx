@@ -1,6 +1,6 @@
 import "./index.scss";
 import { DataGrid, GridToolbar } from "@mui/x-data-grid";
-import { userColumns, userRows } from "../../datatablesource";
+import { userColumns } from "../../datatablesource";
 import { useState } from "react";
 import React from "react";
 import Autocomplete from "@mui/material/Autocomplete";
@@ -13,6 +13,8 @@ import MyModal from "../Modal";
 import MyAlerts from "../Alert";
 import TransitionAlerts from "../Alert";
 import MyDataGrid from "../DataGrid";
+import ExportToExcelButton from "../ExportButton";
+import TableToExcel from "../TableToExcel";
 
 const DataTable = (props) => {
   const actionColumn = [
@@ -39,32 +41,42 @@ const DataTable = (props) => {
     },
   ];
   const [data, setData] = useState(props.rows);
-
-  function getValueFromInput() { }
   const [tfValue, setTFValue] = useState("");
 
   const handleDelete = (id) => {
     setData(data.filter((item) => item.id !== id));
   };
-  // let filteredData = [];
-  // filteredData = props.rows.filter((item) => {
-  //   return item.ovog_ner.toLowerCase().includes(tfValue.toLocaleLowerCase());
-  // });
+  
+  let filteredData = [];
+  if(!props.type){
+    filteredData = props.rows.filter((item) => {
+    return item.ovog_ner.toLowerCase().includes(tfValue.toLocaleLowerCase());
+  });
+  }
+  
   return (
     <div className="datatable">
       <div className="datatableTitle">
         {props.title}
+        <div className="actionTable">
+
         {props.search ? (
+          <>
           <TextField
             size="small"
             onChange={(e) => setTFValue(e.target.value)}
             id="outlined-basic"
             label={`${props.searchTitle}`}
             variant="outlined"
-          />
-        ) : null}
+            />
+            <TableToExcel data={props.rows}/>
+            </>
+            ) :  <TableToExcel type={props.type} data={props.rows}/>}
+        </div>
+
       </div>
       {props.type === "schools" ? (
+        
         // <DataGrid
         //       filterMode="client"
         //        rowSelection={false}
@@ -85,9 +97,10 @@ const DataTable = (props) => {
         <MyDataGrid rows={props.rows} columns={props.columns.concat(actionColumn)} />
       ) : props.type === "program" ? (
         <MyDataGrid rows={props.rows} columns={props.columns.concat(actionColumn)} />
-      ) : tfValue === "" ? (
-        <MyDataGrid rows={props.rows} columns={props.columns} />
-      ) : (
+      ) : ( <MyDataGrid
+      rows={filteredData}
+        columns={props.columns}
+      />)
         // <DataGrid
         // filterMode="client"
         //  rowSelection={false}
@@ -100,11 +113,9 @@ const DataTable = (props) => {
         //  pageSizeOptions={[5, 10, 25, 100]}
 
         //  />)
-        <MyDataGrid
-          rows={data}
-          columns={props.columns}
-        />
-      )}
+        
+       
+      }
     </div>
   );
 };

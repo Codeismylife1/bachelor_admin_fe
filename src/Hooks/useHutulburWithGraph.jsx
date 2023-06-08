@@ -8,7 +8,7 @@ export default () => {
 
   useEffect(() => {
     setLoading(true);
-    axios.get(`/burtgel/schoolAndCount`)
+    axios.get(`/burtgel/hutulburAndCount`)
       .then(result => {
         setGraph(result.data.data);
         setError(null);

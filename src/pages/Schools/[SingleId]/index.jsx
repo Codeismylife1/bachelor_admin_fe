@@ -4,7 +4,7 @@ import Header from "../../../components/Header";
 import "./index.scss"
 import Sidebar from "../../../components/Sidebar";
 import DataTable from "../../../components/DataTable";
-import { schoolColumns, schoolRows } from "../../../datatablesource";
+import { schoolColumns } from "../../../datatablesource";
 
 const Schools = () => {
   return <div className="home">
@@ -13,7 +13,7 @@ const Schools = () => {
     <MyContainer>
       <Header name="СУРГУУЛИУД"></Header>
       <div className="row">
-        <DataTable columns={schoolColumns } rows={schoolRows} title="Салбар сургуулиуд" type="schools"/>
+        <DataTable columns={schoolColumns } rows={[]} title="Салбар сургуулиуд" type="schools"/>
        </div>
     </MyContainer>
   </div>

@@ -2,7 +2,11 @@
   height: 600px;
   padding: 20px;
   width: 1000px;
-
+  .actionTable 
+  {
+    display: flex;
+    gap: 10px;
+  }
   .datatableTitle {
     width: 100%;
     font-size: 24px;
