@@ -31,7 +31,7 @@ const Home = () => {
       <Sidebar />
       <div className={css.homeContainer}>
         <MyContainer>
-          <Header name="ХЯНАХ САМБАР"></Header>
+          <Header name="Dashboard"></Header>
           <div className={css.row}>
             {/* {data.map((e) => {
               return (
